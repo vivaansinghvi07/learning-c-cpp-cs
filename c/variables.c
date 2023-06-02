@@ -6,7 +6,9 @@ int main(void) {
     int number = 1000;
     char character = 'a';
     char second_character = character + 1;  // characters can be converted to ints - this is 'b'
-    float pi = 3.14159;
+
+    // floats and doubles store a sign, an exponent, and a 'mantissa' (the value)
+    float negative_pi = -3.14159;
     float light_speed = 2.99E8; // you can also use E notation
     double pi_precise = 3.14159263538979323;
 
@@ -22,6 +24,7 @@ int main(void) {
     short int small_number = 32;    // forces complier to treat ints as 16 bits, ranging between -32768 and 32767
     long int large_number = 2000000000L;   // stored with 32 bits - should end in an L
     long long int larger_number = 0xffffffffffffffffL;   // stored with 64 bits
+    short other_small_number = 10; // you can omit the int, with some compilers
 
     // hex and octal values
     short int octal_number = 024;   // preceding zero 
@@ -30,5 +33,10 @@ int main(void) {
 
     // holds values in register for easy access
     register short int loop_variable = 0;
+
+    // you can define your own types
+    typedef unsigned short int USINT;
+    USINT n1 = 1, n2, n3, n4 = 4;
+    n2 = n3 = 3;    // multiple assignment is also supported
     
 }
