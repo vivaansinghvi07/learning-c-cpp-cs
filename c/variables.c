@@ -23,6 +23,11 @@ int main(void) {
     long int large_number = 2000000000L;   // stored with 32 bits - should end in an L
     long long int larger_number = 0xffffffffffffffffL;   // stored with 64 bits
 
+    // hex and octal values
+    short int octal_number = 024;   // preceding zero 
+    int hex_number = 0x239;         // preceding 0x
+    long int binary_number = 0b10110010101101;  // preceding 0b
+
     // holds values in register for easy access
     register short int loop_variable = 0;
     
